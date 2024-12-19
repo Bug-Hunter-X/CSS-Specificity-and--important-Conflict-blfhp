@@ -1,0 +1,22 @@
+The solution involves removing the `!important` declaration and restructuring the CSS to rely on the cascade and specificity.
+
+```css
+.parent {
+  color: blue;
+}
+
+.child {
+  color: red;
+}
+
+.parent .child {
+  color: green;
+}
+
+/* Or, if we intend for .child to always override .parent */
+.child {
+  color: red;
+}
+```
+
+By avoiding `!important`, we achieve cleaner CSS, more predictable style application, and fewer potential conflicts.
